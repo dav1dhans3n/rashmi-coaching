@@ -1,0 +1,377 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+:root {
+  --clr-primary-200: #f3eed9;
+  --clr-primary-400: #270dad;
+  --clr-secondary-400: #657cac;
+
+  --clr-neutral-100: #bdc3c7;
+  --clr-neutral-900: #163730;
+
+  --ff-primary: 'Roboto', serif;
+  --ff-accent: 'Merriweather', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+  background: #000;
+  color: white;
+  position: relative;
+}
+
+.overlay-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.carousel-item>img {
+  position: relative;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 2rem 0;
+  /* Space out the Bootstrap <hr> more */
+}
+
+img {
+  width: 100%;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  padding: 1rem;
+  /* rtl:remove */
+  letter-spacing: -0.05rem;
+}
+
+.lead {
+  padding: 1rem;
+}
+
+.bth-container {
+  padding: 1rem;
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+.bg-yellow {
+  background-color: var(--clr-primary-200);
+}
+
+.bg-blue {
+  background-color: var(--clr-secondary-400);
+}
+
+.bg-red {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+}
+
+.bg-dark {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+}
+
+.bg-primary h2,
+.bg-dark h2 {
+  color: var(--clr-primary-200);
+}
+
+.acc-title {
+  font-family: var(--ff-primary);
+}
+.acc-heading {
+  font-family: var(--ff-primary);
+}
+
+/* ===================
+   Portfolio
+   =================== */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: 100px 200px;
+  row-gap: 10px;
+  column-gap: 10px;
+  grid-auto-flow: dense;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.gallery-item .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-item .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+
+.gallery-item:hover .image img {
+  transform: scale(1.5);
+}
+
+.gallery-item .text {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 25px;
+  pointer-events: none;
+  z-index: 4;
+  transition: .3s ease-in-out;
+}
+
+.gallery-item:hover .text {
+  opacity: 1;
+  animation: move-down .3s linear;
+  padding: 1em;
+  width: 100%;
+}
+
+.w-1 {
+  grid-column: span 1;
+}
+
+.w-2 {
+  grid-column: span 2;
+}
+
+.w-3 {
+  grid-column: span 3;
+}
+
+.w-4 {
+  grid-column: span 4;
+}
+
+.w-5 {
+  grid-column: span 5;
+}
+
+.w-6 {
+  grid-column: span 6;
+}
+
+.h-1 {
+  grid-row: span 1;
+}
+
+.h-2 {
+  grid-row: span 2;
+}
+
+.h-3 {
+  grid-row: span 3;
+}
+
+.h-4 {
+  grid-row: span 4;
+}
+
+.h-5 {
+  grid-row: span 5;
+}
+
+.h-6 {
+  grid-row: span 6;
+}
+
+
+
+@keyframes move-down {
+  0% {
+    top: 10%;
+  }
+
+  50% {
+    top: 35%;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+/* ===================
+   CONTACT US FORM
+   =================== */
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 600px;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .7);
+  padding: 1em;
+}
+
+.form-group {
+  margin-bottom: 1.5em;
+}
+
+.form-label {
+  font-size: .75em;
+  color: red;
+  display: block;
+  opacity: 0;
+  transition: all .3s;
+  transform: translateX(-50px);
+}
+
+.form-control {
+  box-shadow: none;
+  border-radius: 0;
+  border-color: #ccc;
+  border-style: none none solid none;
+  width: 100%;
+  font-size: 1.25em;
+  transition: all .6s;
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: blue;
+  outline: none;
+}
+
+.form-group:focus-within {
+  transform: scale(1.1,1.1);
+}
+
+.form-control:invalid:focus {
+  border-color: red;
+}
+
+.form-control:valid:focus {
+  border-color: green;
+}
+
+.bttn {
+  background: 0 0 #fff;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  color: red;
+  font-size: 1em;
+  padding: 10 50px;
+  text-transform: uppercase;
+}
+
+.bttn:hover {
+  border-color: blue;
+  color: blue;
+  background-color: rgb(214, 226, 236);
+  transition: .3s ease background-color;
+}
+
+textarea {
+  resize: none;
+}
+
+.focused > .form-label {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+/* ===================
+   RESPONSIVE CSS
+   =================== */
+
+@media screen and (max-width: 500px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .w-1,
+  .w-2,
+  .w-3,
+  .w-4,
+  .w-5,
+  .w-6 {
+    grid-column: span 1;
+  }
+}
+
+@media (min-width: 40em) {
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
