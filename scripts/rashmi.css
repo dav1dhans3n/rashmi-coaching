@@ -134,9 +134,15 @@ img {
   font-family: var(--ff-primary);
 }
 
+.me-image {
+  width: 400px;
+  float: right;
+  margin-left: 3rem;
+}
+
 /* ===================
    Portfolio
-   =================== */
+   =================== 
 
 .container {
   display: grid;
@@ -255,6 +261,7 @@ img {
     top: 50%;
   }
 }
+*/
 
 /* ===================
    CONTACT US FORM
