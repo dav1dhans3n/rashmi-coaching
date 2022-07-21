@@ -37,12 +37,12 @@ body {
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  bottom: 3rem;
+  bottom: 5rem;
   z-index: 10;
 }
 
@@ -77,7 +77,7 @@ body {
 ------------------------- */
 
 .featurette-divider {
-  margin: 2rem 0;
+  margin: 1em auto 2em;
   /* Space out the Bootstrap <hr> more */
 }
 
@@ -269,6 +269,6 @@ textarea {
 
 @media (min-width: 62em) {
   .featurette-heading {
-    margin-top: 7rem;
+    margin-top: 3rem;
   }
 }
