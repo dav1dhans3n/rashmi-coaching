@@ -74,40 +74,57 @@
     </header>
     
     <!-- CONTACT FORM -->
+    <section class="">
+      <!-- START THE FEATURETTES -->
+      <div class="bth-container">
+          <h1 class="featurette-title text-center" id="life">Contact Me</h1>
+          <hr class="featurette-divider">
+          <div class="row featurette">
+              <h2 class="acc-title"><b>Let's get connected </b></h2>
+                  <h4 class="acc-heading">Confidentiality and discretion is guaranteed</h4>
+                  <p class="lead" style="margin-bottom: -10px;">If you have any questions, need 
+                    additional information, or are interested in scheduling a session, please 
+                    fill out this form and I will reach out shortly.<br></p>
+
+
+                  <form name="contact-form">
+                    <div class="form-control">
+                      <label for="name">Name</label>
+                      <input name="name" type="text" placeholder="First and Last Name" id="name-input" />
+                      <div class="error hide">Name is required</div>
+                    </div>
+                    
+                    <div class="form-control">
+                      <label for="email">Email</label>
+                      <input name="email" type="email" placeholder="your_email@example.com" id="email-input" />
+                      <div class="error hide">Email is invalid</div>
+                    </div>
+                    
+                    <div class="form-control">
+                      <label >Phone</label>
+                      <input name="phone" placeholder="(###)###-####" id="phone-input">
+                      <div class="error hide">Phone is invalid</div>
+                    </div>
+
+                    <div class="form-control">
+                      <label for="message">Message</label>
+                      <textarea name="message" placeholder="Your message" id="message-input"></textarea>
+                      <div class="error hide">Message is required</div>
+                    </div>
+
+                    <input class="btn btn-lg btn-success" type="submit"/>
+                    <div>
+                      <p id="result-text"></p>
+                    </div>
+                  </form>
+                  <div class="thank-you hide">
+                    Success!
+                    Thank you for contacting me. Your submission has been emailed and I will get back to you soon. 
+                  </div>
+          </div>
+      </div>
+    </section>
     
-    <div class="container contact-container">
-      <form action="" method="POST" class="form">
-        <p>
-          <h3 class="text-center">Contact me today!</h3><br>
-          <h5 class="text-center">If you have any questions, need additional information, or
-            are interested in scheduling a session, please contact me.<br><br>
-            Please note that confidentiality and discretion are always guaranteed.
-          </h5><br><br>
-      </p>
-
-        <div class="form-group">
-          <label for="name" class="form-label">Your Name</label>
-          <input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe" tabindex="1" required>
-        </div>
-        <div class="form-group">
-          <label for="email" class="form-label">Your Email</label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="janedoe@email.com" tabindex="2" required>
-        </div>
-        <div class="form-group">
-          <label for="subject" class="form-label">Subject</label>
-          <input type="subject" class="form-control" id="subject" name="subject" placeholder="Hello, I have a quick question for you" tabindex="3" required>
-       
-        </div>
-        <div class="form-group">
-          <label for="message" class="form-label">Message</label>
-          <textarea class="form-control" rows="5" cols="50" id="message" name="message" placeholder="Enter message..." tabindex="4"></textarea>
-        </div>
-        <div class="">
-          <button class="bttn" type="submit">Send Message</button>
-        </div>
-      </form>
-    </div>
-
     <!-- FOOTER -->
 <!--    <div>
       <footer class="container-fluid">
@@ -119,6 +136,7 @@
     <!-- SCRIPTS -->
     <script src="scripts/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="scripts/bth.js"></script>
+    <script src="scripts/index.js"></script>
+    <!-- <script src="scripts/contactme.js"></script> -->
   </body>
 </html>

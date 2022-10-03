@@ -154,6 +154,10 @@ img {
    CONTACT US FORM
    =================== */
 
+form {
+    padding: 10px;
+  }
+
 .contact-container {
   display: flex;
   justify-content: center;
@@ -178,10 +182,11 @@ img {
 }
 
 .form-control {
+  padding: 0;
   box-shadow: none;
   border-radius: 0;
   border-color: #ccc;
-  border-style: none none solid none;
+  border-style: none none none none;
   width: 100%;
   font-size: 1.25em;
   transition: all .6s;
@@ -215,7 +220,7 @@ img {
   border-radius: 3px;
   color: red;
   font-size: 1em;
-  padding: 10 50px;
+  padding: 10 10px;
   text-transform: uppercase;
 }
 
@@ -226,13 +231,64 @@ img {
   transition: .3s ease background-color;
 }
 
-textarea {
-  resize: none;
-}
-
 .focused > .form-label {
   opacity: 1;
   transform: translateX(0px);
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.success {
+  color: rgb(0, 114, 66);
+  font-size: 14px;
+  margin-top: 12px;
+  display: none;
+}
+
+.fail {
+  color: red;
+  font-size: 14px;
+  margin-top: 12px;
+  display: none;
+}
+
+.hide {
+  opacity: 0;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  width: 320px;
+  border: 1px solid #0d3b66;
+  font-size: 18px;
+  outline: none;
+  color: #333;
+}
+
+textarea {
+  width: 400px;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  height: 150px;
+  font-size: 18px;
+}
+
+.thank-you {
+  padding: 40px;
+  font-size: 32px;
+  text-align: center;
 }
 
 /* ===================
