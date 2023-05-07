@@ -329,7 +329,7 @@ textarea {
    RESPONSIVE CSS
    =================== */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 860px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -341,6 +341,11 @@ textarea {
   .w-5,
   .w-6 {
     grid-column: span 1;
+  }
+
+  .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
