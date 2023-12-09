@@ -13,7 +13,8 @@ messageInput.isValid = () => !!messageInput.value;
 const inputFields = [nameInput, emailInput, messageInput];
 
 const isValidEmail = (email) => {
-  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const re =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 };
 
@@ -42,46 +43,47 @@ const validateInputs = () => {
 };
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault();  
+  event.preventDefault();
   //console.log("Form Submitted");
-   console.log('Name: ', nameInput.value);
-   console.log('Email: ', emailInput.value);
+  console.log("Name: ", nameInput.value);
+  console.log("Email: ", emailInput.value);
   //  console.log('Phone: ', phoneInput.value);
-   console.log('Message: ', messageInput.value);
+  console.log("Message: ", messageInput.value);
   shouldValidate = true;
   validateInputs();
   if (isFormValid) {
     form.remove();
     thankYou.classList.remove("hide");
     // TODO: DO AJAX REQUEST
-    
+
     const { name, email, message } = event.target;
 
-    const endpoint = "https://b7qpn630b5.execute-api.us-east-1.amazonaws.com/default/rashmiSendContactEmail";
-    
+    const endpoint =
+      "https://b7qpn630b5.execute-api.us-east-1.amazonaws.com/default/rashmiSendContactEmail";
+
     const body = JSON.stringify({
-        senderName: name.value,
-        senderEmail: email.value,
-        message: message.value
+      senderName: name.value,
+      senderEmail: email.value,
+      message: message.value,
+    });
+    const requestOptions = {
+      method: "POST",
+      body,
+    };
+    fetch(endpoint, requestOptions)
+      .then((response) => {
+        if (!response.ok) throw new Error("Error in fetch");
+        return response.json();
+      })
+      .then(() => {
+        document.getElementById("result-text").innerText =
+          "Email sent successfully!";
+        // })
+        // .catch((error) => {
+        //   document.getElementById("result-text").innerText =
+        //     "An unkown error occured.";
       });
-      const requestOptions = {
-        method: "POST",
-        body
-      };
-      fetch(endpoint, requestOptions)
-        .then((response) => {
-          if(!response.ok) throw new Error("Error in fetch");
-          return response.json();
-        })
-        .then((response) => {
-          document.getElementById("result-text").innerText = 
-            "Email sent successfully!";
-        })
-        .catch((error) => {
-          document.getElementById("result-text").innerText =
-            "An unkown error occured.";
-        });
-      }
+  }
 });
 
 inputFields.forEach((input) => input.addEventListener("input", validateInputs));
