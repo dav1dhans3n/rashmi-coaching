@@ -1,14 +1,14 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 :root {
-  --clr-primary-200: #f9f8df;
+  --clr-primary-200: #fff;
   --clr-primary-400: #030048;
   --clr-secondary-400: #657cac;
 
   --clr-neutral-100: #bdc3c7;
   --clr-neutral-900: #adf08e;
 
-  /* --clr-primary-200: #fff;
+  /*  --clr-primary-200: #f9f8df;
   --clr-primary-400: #0d3b66;
   --clr-secondary-400: #657cac;
 
