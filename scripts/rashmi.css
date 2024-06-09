@@ -45,6 +45,7 @@ main {
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
+  padding-bottom: 4em;
 }
 
 .container-fluid {
@@ -203,6 +204,11 @@ img {
   margin-left: 3rem;
 }
 
+.hyp-image {
+  width: 400px;
+  margin-left: auto;
+}
+
 .fee-desc {
   text-indent: 2em;
 }
@@ -213,8 +219,8 @@ img {
 
 /****** FOOTER ******/
 
-.footer__container {
-  background-color: rgb(242, 241, 241);
+.footerContainer {
+  background-color: #111;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
@@ -222,11 +228,86 @@ img {
   padding: 1rem;
 }
 
-.disclaimer {
+.footerTitle {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+}
+
+.socialIcons a {
+  text-direction: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.socialIcons a i {
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+}
+
+/* Hover effect on Social Media Icons */
+.socialIcons a:hover {
+  background-color: #111;
+  transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+  color: white;
+  transition: 0.5s;
+}
+/* End Hover effct section */
+
+.footerNav {
+  margin: 30px 0;
+}
+
+.footerNav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.footerNav ul li a {
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+  opacity: 1;
+}
+
+.footerNavBottom {
+  background-color: var(--clr-primary-400);
+  padding: 20px;
+  text-align: center;
+}
+
+.footerNavBottom p {
+  color: white;
+}
+
+.footerDisclaimer {
   font-family: var(--ff-primary);
+  font-weight: 400;
+}
+
+.footerDisclaimer p {
   font-weight: 200;
   line-height: 1;
-  padding: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 /* ===================
@@ -392,6 +473,16 @@ textarea {
   .container-fluid {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .footerNav ul {
+    flex-direction: column;
+  }
+
+  .footerNav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 10px;
   }
 }
 
