@@ -75,6 +75,10 @@ main {
   z-index: 10;
 }
 
+.carousel-caption h1 {
+  font-size: x-large;
+}
+
 /* Declare heights because of positioning of img element */
 .carousel-item {
   height: 32rem;
@@ -117,6 +121,10 @@ main {
 .featurette-divider {
   margin: 1em auto 2em;
   /* Space out the Bootstrap <hr> more */
+}
+
+.featurette-title {
+  margin: 1em;
 }
 
 .featurette {
